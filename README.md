@@ -1,24 +1,30 @@
-# README
+DESCRIPTION:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application serves as two endpoints. The first endpoint is receives a url, and stores to the 
+webpage the text content in the h1, h2, h3, and links tags. The second endpoint is an index route that
+displays all of the indexed urls. The application also implements model and API endpoint testing through
+rspec and FactoryBot. 
 
-Things you may want to cover:
+AFTER CLONING THE REPOSITORY:
 
-* Ruby version
+Run bundle install
 
-* System dependencies
+Run rake db:migrate
 
-* Configuration
+RUNNING THE APPLICATION:
 
-* Database creation
+Post rquest. 
 
-* Database initialization
+In order to index a url, the user makes a post request to http://localhost:3000/url_contents 
 
-* How to run the test suite
+Params must be included and labeled url. url: "www.google.com"
 
-* Services (job queues, cache servers, search engines, etc.)
+If the url is invalid or does not contain content, an error message in JSON will be sent back to the user. 
 
-* Deployment instructions
+Get request. 
 
-* ...
+In order to receive the indexed webpage content, a GET request is made to http://localhost:3000/url_contents 
+
+
+
+
