@@ -6,7 +6,7 @@ class UrlContentsController < ApplicationController
     def create
         scrapedContent = UrlContent.parser(url_params)
         if scrapedContent == 403
-            render json: { messsage: "Invalid URL" } 
+            render json: { messsage: "Invalid URL" }, status: 412
         else
             newContent = UrlContent.new
             newContent.content = scrapedContent.encode("UTF-16be", :invalid=>:replace, :replace=>"?").encode('UTF-8')
