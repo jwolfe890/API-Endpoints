@@ -15,7 +15,7 @@ RUNNING THE APPLICATION:
 
 Post rquest. 
 
-In order to index a url, the user makes a post request to http://localhost:3000/url_contents 
+In order to index a url, the user makes a post request to http://localhost:3000/url_contents/ 
 
 Params must be included and labeled url. url: "www.google.com"
 
